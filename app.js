@@ -19,6 +19,10 @@ app.get("/api/latest", (req, res) => {
     dbController.request(res);
 });
 
+app.get("/", (req, res) => {
+    res.send("To use the app, just type your query after this address. For example: /cats<br><br>You can check the latest queries by using /api/latest.")
+});
+
 app.use(function (req, res, next) {
     res.status(404).send("Page not found!")
 })
