@@ -8,7 +8,7 @@ var mongoose = require("mongoose");
 mongoose.Promise = Promise;
 mongoose.connect(process.env.DB);
 
-app.get("/:queryToSearch", (req, res) => {
+app.get("/api/:queryToSearch", (req, res) => {
     var offset = req.query.offset;
     var searchQuery = req.params.queryToSearch;
     
@@ -20,7 +20,7 @@ app.get("/api/latest", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-    res.send("To use the app, just type your query after this address. For example: /cats<br><br>You can check the latest queries by using /api/latest.")
+    res.send("To use the app, just type your query after this address. For example: /api/cats<br><br>You can check the latest queries by using /api/latest.")
 });
 
 app.use(function (req, res, next) {
