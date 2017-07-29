@@ -1,3 +1,4 @@
+require('dotenv').config()
 var express = require("express");
 var app = express();
 var api = require("./src/api.js");
@@ -5,7 +6,7 @@ var dbController = require("./src/dbController.js");
 var mongoose = require("mongoose");
 
 mongoose.Promise = Promise;
-mongoose.connect("mongodb://tokimatu:tokimatu_image-search@ds129010.mlab.com:29010/tokimatu_image-search");
+mongoose.connect(process.env.DB);
 
 app.get("/:queryToSearch", (req, res) => {
     var offset = req.query.offset;

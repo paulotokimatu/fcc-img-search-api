@@ -1,8 +1,8 @@
 var request = require('request');
 var dbController = require("./dbController.js")
 
-var apiKey = "AIzaSyC1XRJsXhSM4KdmmXmXKBrWBUaMueYWvNg";
-var engineId = "002782723745373797799:udgp1seawf4";
+var apiKey = process.env.API_KEY;
+var engineId = process.env.ENGINE_ID;
 
 function parseResult(result) {
     var parsed = [];

@@ -11,4 +11,5 @@ From: https://www.freecodecamp.com/challenges/image-search-abstraction-layer
 1. `git clone https://github.com/paulotokimatu/fcc-img-search-api.git`
 2. `cd fcc-img-search-api`
 3. `npm install`
-4. `node app.js`
+4. Set up your .env file with DB path, API_KEY (from Google API) and ENGINE_ID (from Google API)
+5. `node app.js`
